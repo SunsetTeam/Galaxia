@@ -1,0 +1,8 @@
+displayName: "Norius"
+name: "galaxia"
+author: "Sunset Team"
+main: "galaxia.Galaxia"
+description: "A Mindustry Java mod."
+version: 1.0
+minGameVersion: 140.1
+java: true
