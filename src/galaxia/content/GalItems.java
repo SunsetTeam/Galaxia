@@ -9,7 +9,7 @@ public class GalItems {
     public static void load() {
 
         craside = new Item("craside");
-        kaylenite = new Item("kalyenite");
+        kaylenite = new Item("kaylenite");
         hanshinium = new Item("hanshinium");
 
         lonite = new Item("lonite");
