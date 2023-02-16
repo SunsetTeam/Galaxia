@@ -4,8 +4,8 @@ import mindustry.ai.types.BuilderAI;
 import mindustry.type.UnitType;
 
 public class GalUnits {
-    public static UnitType none;
-    private static UnitType gyurza;
+    public static UnitType
+            gyurza;
 
     public static void load() {
         //core
