@@ -5,25 +5,28 @@ import mindustry.type.UnitType;
 
 public class GalUnits {
     public static UnitType none;
+    private static UnitType gyurza;
+
     public static void load() {
         //core
-        UnitType gyurza = new UnitType("Gyurza") {{
+        gyurza = new UnitType("gyurza") {{
             aiController = BuilderAI::new;
             isEnemy = false;
 
-            lowAltitude = true;
             flying = true;
-            mineSpeed = 21.5f;
+            mineSpeed = 15f;
             mineTier = 1;
-            buildSpeed = 0.35f;
+            buildSpeed = 4.4f;
             drag = 0.05f;
-            speed = 4.3f;
-            rotateSpeed = 10f;
+            speed = 3.3f;
+            rotateSpeed = 17f;
             accel = 0.1f;
-            itemCapacity = 20;
-            health = 340f;
-            hitSize = 12f;
-            alwaysUnlocked = true;
+            itemCapacity = 50;
+            health = 170f;
+            engineOffset = 6f;
+            hitSize = 9f;
+            faceTarget = false;
+            lowAltitude = true;
 
         }};
     }
