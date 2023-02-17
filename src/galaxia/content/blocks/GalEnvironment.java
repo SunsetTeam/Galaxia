@@ -8,48 +8,48 @@ public class GalEnvironment {
 
     public static Block
 
-    //green-biom
-    grenbyFloor, grenbyWall,
+    //green-biome
+    ylbStone, ylbStoneWall,
 
-    //red-biom
-    crimoStone, crimoStoneWall,
+    //red-biome
+    crimStone, crimStoneWall,
+    infStone, infStoneWall,
 
-    crypoStone, crypoStoneWall,
-
-    inferoStone, inferoStoneWall;
+    //purple-biome
+    prbStone, prbStoneWall;
 
 
     public static void load() {
 
-        grenbyFloor = new Floor("grenby-floor"){{
+        ylbStone = new Floor("ylbstone"){{
            variants = 3;
         }};
 
-        crimoStone = new Floor("crimoStone"){{
+        crimStone = new Floor("crimstone"){{
             variants = 4;
         }};
 
-        crypoStone = new Floor("crypoStone"){{
+        infStone = new Floor("infstone"){{
             variants = 4;
         }};
 
-        inferoStone = new Floor("inferoStone"){{
+        prbStone = new Floor("prbstone"){{
             variants = 3;
         }};
 
-        grenbyWall = new StaticWall("grenby-wall"){{
+        ylbStoneWall = new StaticWall("ylbstone-wall"){{
             variants = 2;
         }};
 
-        crimoStoneWall = new StaticWall("crimoStone-wall"){{
+        crimStoneWall = new StaticWall("crimStone-wall"){{
             variants = 3;
         }};
 
-        crypoStoneWall = new StaticWall("crypoStone-wall"){{
+        infStoneWall = new StaticWall("infstone-wall"){{
             variants = 3;
         }};
 
-        inferoStoneWall = new StaticWall("inferoStone-wall"){{
+        prbStoneWall = new StaticWall("prbstone-wall"){{
             variants = 2;
         }};
     }
