@@ -1,6 +1,7 @@
 package galaxia.content;
 
 import mindustry.ai.types.BuilderAI;
+import mindustry.gen.UnitEntity;
 import mindustry.type.UnitType;
 
 public class GalUnits {
@@ -28,6 +29,7 @@ public class GalUnits {
             faceTarget = false;
             lowAltitude = true;
 
+            constructor = UnitEntity::create;
         }};
     }
 }

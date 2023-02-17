@@ -31,7 +31,7 @@ public class Galaxia extends Mod{
         GalItems.load();
         GalLiquids.load();
         GalStatusEffects.load();
-        GalBlocks.load();
+        new GalBlocks();
         GalUnits.load();
         GalPlanets.load();
     }

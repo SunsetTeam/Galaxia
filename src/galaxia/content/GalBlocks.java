@@ -1,28 +1,33 @@
 package galaxia.content;
-import galaxia.world.blocks.power.LightningPowerNode;
-import mindustry.type.Category;
-import mindustry.world.Block;
+import galaxia.content.blocks.*;
 
-public class GalBlocks {
-    public static Block
-    plasmaNode, plasmaDistributor;
+public class GalBlocks implements Runnable{
+    public Runnable[] list = {
+            GalCrafting::load,
 
-    public static void load() {
+            GalDistribution::load,
+            GalLiquidBlocks::load,
 
-        plasmaNode = new LightningPowerNode("plasma-node", 0){{
-            category = Category.power;
-            consumePowerBuffered(4000f);
-            lightningRange = 16 * 8f;
-            thresholdPerTile = 25f / 8;
-        }};
+            GalPower::load,
+            GalProduction::load,
 
-        plasmaDistributor = new LightningPowerNode("plasma-distributor", 12){{
-            category = Category.power;
-            size = 2;
-            consumePowerBuffered(7500f);
-            lightningRange = 9 * 8f;
-            laserRange = 7;
-            thresholdPerTile = 10f / 8;
-        }};
+            GalUnitBlocks::load,
+            GalPayloadBlocks::load,
+
+            GalSandbox::load,
+
+            GalEnvironment::load,
+    };
+
+    public static void load(){
+        throw new RuntimeException("is must not invoked");
+//        for (ContentList blockList : list) {
+//            blockList.load();
+//        }
+    }
+
+    @Override
+    public void run(){
+        load();
     }
 }
