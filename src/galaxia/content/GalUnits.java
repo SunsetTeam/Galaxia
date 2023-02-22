@@ -1,8 +1,12 @@
 package galaxia.content;
 
+import galaxia.entities.bullet.HarpoonBulletType;
 import mindustry.ai.types.BuilderAI;
+import mindustry.content.Fx;
+import mindustry.gen.Sounds;
 import mindustry.gen.UnitEntity;
 import mindustry.type.UnitType;
+import mindustry.type.Weapon;
 
 public class GalUnits {
     public static UnitType
@@ -30,6 +34,16 @@ public class GalUnits {
             lowAltitude = true;
 
             constructor = UnitEntity::create;
+            weapons.add(new Weapon("harpoon"){{
+                bullet = new HarpoonBulletType(4.2f, 37f);
+                reload = 80f;
+                alternate = false;
+                x = 0f;
+                y = 0f;
+                rotate = true;
+                ejectEffect = Fx.none;
+                shootSound = Sounds.shootSnap;
+            }});
         }};
     }
 }
